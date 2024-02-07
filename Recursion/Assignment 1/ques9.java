@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class ques9 {
 
     static String cleanWord(String word,char c1,char c2,int ind,int len){
-        if(ind!=len) {
+        if(ind+1!=len) {
             if (c1 == c2)
                 return cleanWord(word, c1,word.charAt(ind+1),ind+1,len);
             else
-                return c2 + cleanWord(word,c2,word.charAt(ind+1),ind,len);
+                return c1 + cleanWord(word,c2,word.charAt(ind+1),ind,len);
         }
         else return "";
     }
